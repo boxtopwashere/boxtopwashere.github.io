@@ -2,11 +2,25 @@
 <html>
 <head>
     <title>My GitHub Page</title>
+    <!-- Include a Markdown parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.6/markdown-it.min.js"></script>
 </head>
 <body>
     <h1>Welcome to My GitHub Page</h1>
-    <div>
-        {% ArchInstall.md %}
-    </div>
+    <div id="content"></div>
+
+    <script>
+        // Fetch the Markdown file
+        fetch('ArchInstall.md')
+            .then(response => response.text())
+            .then(text => {
+                // Parse the Markdown to HTML
+                const md = window.markdownit();
+                const htmlContent = md.render(text);
+
+                // Set the HTML content
+                document.getElementById('content').innerHTML = htmlContent;
+            });
+    </script>
 </body>
 </html>
