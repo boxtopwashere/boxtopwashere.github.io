@@ -37,14 +37,14 @@ t >> 2 >> 19 # linux swap
 
 #### Formatting The Partion
 ```sh
-* mkfs.fat  -F32  /dev/sda1 # efi file system
-* mkswap /dev/sda2 # swap
-* mkfs.ext4 /dev/sda3 # root file system
+mkfs.fat  -F32  /dev/sda1 # efi file system
+mkswap /dev/sda2 # swap
+mkfs.ext4 /dev/sda3 # root file system
 ```
 
 #### Mount File Systems
 ```sh mount /dev/sda3 /mnt
-* mount --mkdir /dev/sda1 /mnt/boot
+mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
 ```
 
