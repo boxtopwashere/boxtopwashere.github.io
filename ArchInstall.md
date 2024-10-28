@@ -19,8 +19,8 @@
 ```
 * system clock
 ```sh
-	timedatectl
-	```
+timedatectl
+```
 
 #### Partitioning The Disk
 ```sh
