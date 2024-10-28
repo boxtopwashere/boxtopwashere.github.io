@@ -2,7 +2,7 @@
 ## Pre Install
 #### Preparing Installation
 * Download Arch Linux ISO and verify signature use sha256sums
-* Create new VM using verified ISO with 20GB of ram
+* Create new VM using verified ISO with 20GB of HDD
 
 
 ## Base Installation
@@ -152,7 +152,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```sh
 #only works for current user
 nano ~/.zshrc #adjusting zsh settings
-PROMPT='%F{2}%n%f@%F{94}%m%f:%F{222}%~%f  ' #chnage spromot color and qualties 
+PROMPT='%F{2}%n%f@%F{94}%m%f:%F{222}%~%f  ' #change color and qualties 
 #write to end of file and save
 source ~/.zshrc 
 #set source to our adjusted file
