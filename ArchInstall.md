@@ -86,6 +86,7 @@ nano /etc/hostname
 pacman -S networkmanager
 systemctl enable NetworkManager
 systemctl start NetworkManager```
+```
 
 #### Root Password
 ```sh
@@ -94,9 +95,9 @@ passwd
 
 #### Boot Loader
 ```sh
-* pacman -Sy grub efibootmgr
-* grub-install --target=x86_64-efi --efi-directory=mnt/boot --bootloader-id=GRUB
-* grub-mkconfig -o /boot/grub/grub.cfg
+pacman -Sy grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=mnt/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Reboot and Post Install
@@ -129,6 +130,7 @@ usermod -aG wheel TMAC
 usermod -aG wheel codi
 usermod -aG wheel justin
 ```
+
 #### Desktop Environment
 ```sh
 pacman -Sy xorg plasma plasma-workspace kde-applications konsole
